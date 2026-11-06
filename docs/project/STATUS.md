@@ -1,3 +1,39 @@
+## 2026-11-05 - Source-only clone and CI LFS audit (issue #501)
+
+Task base 5ff1e114 on `task/001-lfs-clone-size`. Documents the pointer-only clone
+path, states the checkout LFS policy explicitly in every workflow, and records the
+LFS-versus-release-assets decision.
+
+Measured in this hydrated checkout: 3.1 GB total, `assets/` 1.5 GB, `.git/lfs`
+1.5 GB, `.git/objects` 34 MB, and 6,812 LFS DDS files. The same revision cloned
+with `GIT_LFS_SKIP_SMUDGE=1` measured 129 MB (53 MB working tree, 37 MB `.git`,
+no `.git/lfs`); every DDS was a 130-byte pointer and `git lfs ls-files -s`
+reported no hydrated file. The working tree is larger than the issue's 70 MB
+estimate because the 6,812 texture metadata files are ordinary tracked files.
+
+Pointer-only clone checks: the Repository texture pack verification stops with
+"Texture files are Git LFS pointers. Run git lfs pull before building or
+packaging.", confirming that job needs `lfs: true`.
+`tests/textures/test_build_textures.py` and `test_texture_release.py` passed
+unchanged there: 19 passed plus 3 subtests. `test_texture_runtime.py`,
+`test_texture_hybrid_plan.py`, `test_texture_upscale_originals.py` and
+`test_texel_sample_lanes.py` gave identical results in the hydrated and
+pointer-only clones (5 failed, 29 passed, 2 skipped, 22 errors); those failures
+need the prepared `external/ts3FPrecomp` runtime this worktree lacks, so they are
+an environment gap, not LFS evidence.
+
+Workflow audit: 12 workflows, 22 checkout steps. Only
+`.github/workflows/texture-pack.yml` asked for LFS; the other 21 now state
+`lfs: false` explicitly. All 12 still parse and actionlint 1.7.12 reports no
+issues. Hosted logs agree: PR run 42102184813 (Runtime patch transitions)
+contains no git-lfs call, while texture-pack run 41529710716 logs
+`git lfs install --local` and `git lfs fetch`. Focused suites at this revision:
+164 passed plus 13 subtests across repository context, CI scope, texture build
+and release policy, and launcher release policy; `tools/repo-context.py refresh`
+and `check --base 5ff1e114` passed. Not run: hosted CI for these workflow edits,
+any Windows build or package from a source-only clone, and `tsfp.ps1`/Mac native
+builds. No game launch, save or personal setting was used.
+
 ## 2026-11-05 - Issue497 native effect depth candidate
 
 Based on main772a38df; local fix/497-electricity-through-walls. Live HLE and

@@ -20,7 +20,7 @@ before reorganizing files.
 | `tools/router/` | Optional local advisory integration |
 | `tests/` | Regression suites and native harnesses; `fixtures/` holds intentional test inputs |
 | `config/` | Tracked defaults, SDK pins and policy; personal configuration is ignored |
-| `assets/textures/` | Published texture keys and metadata; DDS payloads use Git LFS |
+| `assets/textures/` | Published texture keys and metadata; optional DDS payloads use Git LFS and stay pointers in a source-only clone |
 | `docs/` | Stable player/developer guides; [browse by task](../README.md) |
 | `docs/agent-context/` | Maintained subsystem maps and generated patch index |
 | `docs/assets/` | Selected documentation images and buttons |

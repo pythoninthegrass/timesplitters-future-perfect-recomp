@@ -45,8 +45,10 @@ the Windows editing checkout and Linux working checkout on the same committed
 source revision; fetch new commits from the Windows checkout before building.
 Preserve any Linux edits before switching revisions. Never apply patches/build concurrently on two
 hosts sharing the same ignored runtime tree. No second game-data extract is needed
-for these asset-free tests. Keep `build/windows`, `build/macos` and `build/linux`
-separate, and preserve personal settings/saves.
+for these asset-free tests, so clone with `GIT_LFS_SKIP_SMUDGE=1` and leave the
+1.5 GiB texture pack as pointers (`git lfs pull` before texture work). Keep
+`build/windows`, `build/macos` and `build/linux` separate, and preserve personal
+settings/saves.
 
 On Ubuntu, install the development prerequisites. SDL's upstream
 [Linux dependency guide](https://wiki.libsdl.org/SDL3/README-linux) includes the

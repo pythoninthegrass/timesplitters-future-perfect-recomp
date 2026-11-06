@@ -40,6 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          lfs: false
           # Changelog filtering needs the previous launcher tag and commit range.
           fetch-depth: 0
           persist-credentials: false

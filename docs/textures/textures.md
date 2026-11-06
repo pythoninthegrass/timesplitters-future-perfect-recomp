@@ -63,6 +63,31 @@ The nested source ZIP also omits compiled textures. Source launches can continue
 to use `assets/textures` when present. Building never enables Enhanced or changes
 personal settings. Players still supply their original game data.
 
+These DDS files are the repository's only Git LFS content, and no ordinary build
+or package reads them, so cloning without hydration is the supported default; see
+[Clone the source](../development/building.md#clone-the-source).
+
+### Source-only checkout
+
+Skip hydration when the work does not touch replacement artwork (about 129 MB
+instead of 3.1 GB):
+
+```sh
+GIT_LFS_SKIP_SMUDGE=1 git clone <repository-url>   # PowerShell: set $env:GIT_LFS_SKIP_SMUDGE='1' first
+git lfs install --local --skip-smudge              # keep later fetches pointer-only
+```
+
+Hydration is then an explicit, per-checkout step:
+
+```sh
+git lfs pull
+git lfs ls-files -s    # '*' = hydrated, no marker = pointer
+```
+
+`git lfs pull` fills both the working tree and the `.git/lfs` object cache, so
+each hydrated checkout costs about 1.5 GiB twice. `git lfs prune` is not a
+shortcut for that: unpushed objects must survive.
+
 ## Developer upload timing
 
 For a bounded developer investigation, set `TSFP_TEXTURE_UPLOAD_TRACE` to an
@@ -293,10 +318,39 @@ LFS retains an object cache as well as hydrated files. Avoid hydrating unrelated
 worktrees and never prune unpushed objects.
 
 The **Repository texture pack** workflow downloads LFS content and checks every
-DDS, metadata file and declared size/count. Unrelated CI jobs keep pointer-only
-checkouts. Merge approved assets into main, then follow Publishing optional pack
-updates above to make them available in the launcher. Ordinary game releases do
-not carry the pack. Issue #74 stays open until the overhaul is complete.
+DDS, metadata file and declared size/count. It is the only checkout that asks for
+LFS: every other workflow checkout states `lfs: false` explicitly, so a changed
+action default cannot quietly add 1.5 GiB to an unrelated job. Merge approved
+assets into main, then follow Publishing optional pack updates above to make them
+available in the launcher. Ordinary game releases do not carry the pack. Issue #74
+stays open until the overhaul is complete.
+
+## Storage decision: LFS and release assets
+
+Issue #501 asks whether the compiled pack should leave Git LFS for release
+assets, which have stable URLs and no retention limit. The project uses both,
+each for the audience that needs it:
+
+| Store | Contents | Used by | Cost in a checkout |
+| --- | --- | --- | --- |
+| Git LFS (`assets/textures/*.dds`) | Authoritative compiled DDS, 6,812 files / 1,574,002,482 bytes | Asset work, `--with-textures` bundles, the **Repository texture pack** check | 1.5 GiB working copy plus 1.5 GiB in `.git/lfs` when hydrated; 130-byte pointers otherwise |
+| GitHub release assets (`textures-v<version>`) | The same DDS, split into bounded hashed parts | Players through the launcher's texture download | Nothing |
+
+`config/texture-download.json` is the published index the launcher reads, and
+`tools/textures/texture-release.py` publishes and re-verifies the parts against
+it, so player delivery already meets the stable-URL, no-retention goal. Keeping
+the DDS in LFS as well preserves what release assets cannot give the same
+workflows: the assets travel with the source revision that produced them, review
+and `--pointers-only` export work on keys, and CI audits the committed pack
+rather than an out-of-band download. Moving the DDS out of LFS would need a
+separate versioned manifest as developer input, a second audit path for the
+committed pack, and a new way to review DDS in a pull request.
+
+The clone-size complaint is therefore solved at the checkout rather than at the
+store: clone with `GIT_LFS_SKIP_SMUDGE=1` and hydrate only for asset work. Move
+the pack out of LFS if LFS storage or bandwidth limits bind, if hydrated
+checkouts become the common case instead of the exception, or if the pack stops
+being an authoring input and ships only as a download.
 
 ## Local 2x upscale from original game textures
 

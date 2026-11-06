@@ -23,7 +23,10 @@ See the [repository layout](docs/development/repository-layout.md) for file loca
 naming conventions and the distinction between source and local build data.
 
 1. For a large change, discuss the approach in an issue or Discussion first.
-2. Fork the repository and make a focused branch from the latest `main`.
+2. Fork the repository and make a focused branch from the latest `main`. A plain
+   clone also downloads the optional 1.5 GiB texture pack; use the source-only
+   clone in the [build guide](docs/development/building.md#clone-the-source) and
+   run `git lfs pull` only for texture work.
 3. For code changes, read [AGENTS.md](AGENTS.md), the shared project rules, and
    the [repository map](docs/agent-context/README.md). Update each affected
    subsystem guide in the same change; CI checks this maintenance requirement.

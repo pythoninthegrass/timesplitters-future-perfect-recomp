@@ -276,7 +276,10 @@ The launcher publication job requires a full-history checkout (`fetch-depth: 0`)
 for `launcher_pr_notes` to inspect the previous launcher tag and merged commit
 range. Build-job history does not carry into the separate publication job.
 `test_launcher_release.py` checks this prerequisite; tags and published assets
-remain immutable during interrupted-publication recovery.
+remain immutable during interrupted-publication recovery. Launcher and issue-form
+workflow checkouts each state `lfs: false`, so they never pull the optional
+1.5 GiB texture pack; only the texture verification job asks for LFS
+(see [runtime CI](runtime-ci.md)).
 
 Read [launcher usage](../players/launcher.md), [Windows launcher](../players/windows-launcher.md),
 [Mac launcher](../players/mac-launcher.md) and [release process](../release/launcher-releases.md)

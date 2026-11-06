@@ -6,13 +6,46 @@
 
 For native Apple Silicon, start with the [Mac guide](../players/macos.md). Run commands below from the repository root.
 
+## Clone the source
+
+Only `assets/textures/*.dds` is Git LFS content: 6,812 compiled replacement
+textures, about 1.5 GiB, stored twice locally when hydrated (working tree plus
+`.git/lfs`). The pack is optional for building and packaging, so a source-only
+clone needs no LFS download at all. Measured on one revision: 129 MB
+(53 MB working tree, 37 MB `.git`, no `.git/lfs`) instead of 3.1 GB.
+
+```powershell
+# PowerShell: skip the texture download for this clone
+$env:GIT_LFS_SKIP_SMUDGE = '1'
+git clone https://github.com/TheDoffman/timesplitters-future-perfect-pc.git
+Remove-Item Env:GIT_LFS_SKIP_SMUDGE
+```
+
+```sh
+# macOS, Linux or Git Bash
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/TheDoffman/timesplitters-future-perfect-pc.git
+```
+
+`git lfs install --local --skip-smudge` keeps later fetches pointer-only for one
+checkout, and `git lfs install --global --skip-smudge` makes that the account
+default. A plain `git clone` hydrates the pack instead.
+
+Run `git lfs pull` before authoring or auditing replacement DDS; ordinary builds
+and packages ignore the pointers. `git lfs ls-files -s` marks hydrated files with
+`*`, and a pointer is a 130-byte text file beginning
+`version https://git-lfs.github.com/spec/v1` where DDS bytes begin with `DDS `.
+Commands that really need the pack stop with a `git lfs pull` instruction instead
+of quietly building without replacements. See
+[texture build dependency](../textures/textures.md#texture-build-dependency) and
+[the storage decision](../textures/textures.md#storage-decision-lfs-and-release-assets).
+
 ## Build on Windows
 
 Build and release commands automatically reuse matching successful patch and
 launcher checks. See [release performance](release-performance.md) for measured
 scope, invalidation rules and commands to force fresh validation.
 
-For a fresh checkout, install Git with Git LFS, Visual Studio 2022 with its C++ workload and
+For a fresh checkout, install Git (add Git LFS when you will hydrate textures), Visual Studio 2022 with its C++ workload and
 Windows SDK, and Python 3.12+, then run:
 
 ```powershell
@@ -26,12 +59,15 @@ validates the input paths and Python version, then runs Setup, Extract, Test,
 Generate, and Build in order, stopping at the first failure. It requires internet
 access for dependency downloads; it does not install Git, Python, or Visual Studio.
 The default output is `build/windows/Release/futureperfect_recomp.exe`.
-Build audits the compiled pack in `assets/textures`, committed through Git LFS.
-Run `git lfs install` and `git lfs pull` after cloning if the files are still
-LFS pointers. Source ZIP downloads may contain pointers; a Git LFS checkout is
-the supported build input. No separate texture release is needed. Later builds
-reuse these files offline. See the [texture build dependency](../textures/textures.md#texture-build-dependency).
-Use `tsfp.ps1 Build -SkipTextures` for an explicitly lightweight build.
+The compiled pack in `assets/textures` is optional Git LFS content, so a
+source-only checkout builds unchanged: `tsfp.ps1` audits those DDS files only
+when `config/textures/texture-pack.json` selects `bundled` delivery. Hydrate
+with `git lfs pull` for asset work or an explicit `--with-textures` bundle;
+players receive the same pack as GitHub release assets through the launcher, so
+a game release needs no separate texture upload. Later builds reuse hydrated
+files offline. See
+[texture build dependency](../textures/textures.md#texture-build-dependency).
+Use `tsfp.ps1 Build -SkipTextures` to state the lightweight intent explicitly.
 After setup succeeds, double-click `Play.cmd` to play from the repository.
 The extracted files in `private/game` must remain; the ISO is no longer needed.
 Use `-Configuration Debug` or `-Configuration RelWithDebInfo` for another build

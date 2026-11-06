@@ -64,6 +64,16 @@ publishes immutable schema-3 parts plus per-file hashes; the public index is
 unpublished placeholder is replaced only after successful publication. Asset CI
 hydrates LFS for pack/auditor changes, not game or launcher version bumps.
 
+Every workflow checkout now states its LFS intent explicitly: only
+`.github/workflows/texture-pack.yml` sets `lfs: true`, and the other 21 checkout
+steps across the remaining 11 workflows set `lfs: false`, so an upstream default
+change cannot hydrate 1.5 GiB inside an unrelated job. Verified 2026-11-06: PR run
+42102184813 logs contain no git-lfs call, while the texture-pack run logs show
+`git lfs install --local` and `git lfs fetch`. In a `GIT_LFS_SKIP_SMUDGE=1` clone
+the texture verification fails with the pointer error and the release/texture
+suites pass unchanged. Clone and hydration commands live in
+[building](../development/building.md#clone-the-source).
+
 Regression routes: `test_texture_release.py`, `test_build_textures.py`,
 `test_publish_release.py`, `package_launcher.py`, `test_native_mac_package.py` and
 both launcher hosts' `--textures` / shared UI checks. Indexed-update tests cover

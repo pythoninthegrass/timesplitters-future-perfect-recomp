@@ -211,6 +211,10 @@ When the optional pack is available, use **Game settings → Graphics & resoluti
 | [Textures](docs/textures/textures.md) | [Isolated gameplay testing](docs/development/testing-profile.md) |
 | [Crash reports](docs/players/windows-crash-logger.md) | [Repository map for agents](docs/agent-context/README.md) |
 
+Building from a fresh clone? A plain `git clone` also downloads the optional
+1.5 GiB enhanced-texture pack; [Clone the source](docs/development/building.md#clone-the-source)
+skips it and hydrates later with `git lfs pull` for texture work.
+
 **[Report a bug](https://github.com/TheDoffman/timesplitters-future-perfect-pc/issues/new?template=01-bug-report.yml)**
 with your installed versions, platform and steps to reproduce. The launcher's
 **Diagnostics** page provides local reports and logs; nothing uploads automatically.
