@@ -55,7 +55,7 @@ Steps:
 ## Implementation Notes
 
 <!-- SECTION:NOTES:BEGIN -->
-Branch/worktree: task/001-lfs-clone-size (commit 8bd175d9) at /Users/lance/.local/share/opencode/worktree/bafad0/task-001-lfs-clone-size. Main checkout left untouched because another agent has an uncommitted AGENTS.md rewrite; AGENTS.md and docs/agent-context/investigation.md were off-limits.
+Branch/worktree: task/001-lfs-clone-size (commit 50c4c4ba) at /Users/lance/.local/share/opencode/worktree/bafad0/task-001-lfs-clone-size. Main checkout left untouched because another agent has an uncommitted AGENTS.md rewrite; AGENTS.md and docs/agent-context/investigation.md were off-limits.
 
 User decisions: CI hardening (explicit lfs: false) rather than audit-only or audit+test; no public posting on issue #501; decision recorded in docs/textures/textures.md rather than a new decision doc.
 
@@ -95,7 +95,7 @@ The repository's only Git LFS content is 6,812 optional compiled DDS files. Git 
 
 ## Risks and follow-ups
 
-- Work lived on branch `task/001-lfs-clone-size` (commit 8bd175d9) in an OpenCode worktree; on instruction it was fast-forward merged into local `main` and the worktree removed. Not pushed, and the issue #501 comment was deliberately not posted.
+- Work lived on branch `task/001-lfs-clone-size` (commit 50c4c4ba) in an OpenCode worktree; on instruction it was fast-forward merged into local `main` and the worktree removed, then pushed to `origin/main`. The issue #501 comment was deliberately not posted. That first commit was rewritten on 2026-11-05 to author `pythoninthegrass` (it had carried `OpenCode Agent <agent@example.com>` from a harness-created worktree identity), so its SHA moved from `8bd175d9` to `50c4c4ba`.
 - Follow-up committed 2026-11-05: the clone-size figures in `docs/development/building.md`, `docs/textures/textures.md` and this task record were re-measured in a single checkout and corrected (see Implementation Notes).
 - Not run: hosted Actions for these workflow edits, a Windows or Mac native build from a source-only clone, and game launch/validation of any kind.
 - `docs/agent-context/build-test.md` sits exactly at the 65,536-byte context cap, so future guide edits there must be byte-neutral; the removed duplicate job-budget sentence already lives in `runtime-ci.md`.
