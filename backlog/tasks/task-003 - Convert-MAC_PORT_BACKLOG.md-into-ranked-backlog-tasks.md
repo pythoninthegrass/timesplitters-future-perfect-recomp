@@ -1,11 +1,11 @@
 ---
 id: TASK-003
 title: Convert MAC_PORT_BACKLOG.md into ranked backlog tasks
-status: In Progress
+status: Done
 assignee:
   - Assistant
 created_date: '2026-11-06 04:07'
-updated_date: '2026-11-06 04:38'
+updated_date: '2026-11-06 04:39'
 labels:
   - docs
   - macos
