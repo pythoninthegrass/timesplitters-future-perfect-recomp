@@ -9,10 +9,15 @@ For native Apple Silicon, start with the [Mac guide](../players/macos.md). Run c
 ## Clone the source
 
 Only `assets/textures/*.dds` is Git LFS content: 6,812 compiled replacement
-textures, about 1.5 GiB, stored twice locally when hydrated (working tree plus
-`.git/lfs`). The pack is optional for building and packaging, so a source-only
-clone needs no LFS download at all. Measured on one revision: 129 MB
-(53 MB working tree, 37 MB `.git`, no `.git/lfs`) instead of 3.1 GB.
+textures, 1,572,457,676 bytes (1.46 GiB), duplicated locally when hydrated
+(working tree plus `.git/lfs`). The pack is optional for building and packaging,
+so a source-only clone needs no LFS download at all. Measured 2026-11-05 on one
+revision (local `git clone --no-local` of that revision): 126 MB for the whole
+clone — 34 MB `.git` with no LFS objects, plus about 92 MB of working tree, of
+which only 35 MB is content and the rest is 4 KiB block overhead over 16,433
+files — instead of 3.1 GB hydrated. `assets/` alone accounts for 53 MB of that:
+the 6,812 pointers and 6,812 metadata JSON files each take a block for under
+2 KiB of data.
 
 ```powershell
 # PowerShell: skip the texture download for this clone

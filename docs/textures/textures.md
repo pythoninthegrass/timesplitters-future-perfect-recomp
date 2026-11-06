@@ -69,7 +69,7 @@ or package reads them, so cloning without hydration is the supported default; se
 
 ### Source-only checkout
 
-Skip hydration when the work does not touch replacement artwork (about 129 MB
+Skip hydration when the work does not touch replacement artwork (about 126 MB
 instead of 3.1 GB):
 
 ```sh
@@ -333,7 +333,7 @@ each for the audience that needs it:
 
 | Store | Contents | Used by | Cost in a checkout |
 | --- | --- | --- | --- |
-| Git LFS (`assets/textures/*.dds`) | Authoritative compiled DDS, 6,812 files / 1,574,002,482 bytes | Asset work, `--with-textures` bundles, the **Repository texture pack** check | 1.5 GiB working copy plus 1.5 GiB in `.git/lfs` when hydrated; 130-byte pointers otherwise |
+| Git LFS (`assets/textures/*.dds`) | Authoritative compiled DDS: 6,812 files, 1,572,457,676 bytes on disk (the index advertises 1,574,002,482 `installed_bytes`) | Asset work, `--with-textures` bundles, the **Repository texture pack** check | 1.5 GiB working copy plus 1.5 GiB in `.git/lfs` when hydrated; 130-byte pointers otherwise |
 | GitHub release assets (`textures-v<version>`) | The same DDS, split into bounded hashed parts | Players through the launcher's texture download | Nothing |
 
 `config/texture-download.json` is the published index the launcher reads, and

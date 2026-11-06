@@ -5,11 +5,18 @@ path, states the checkout LFS policy explicitly in every workflow, and records t
 LFS-versus-release-assets decision.
 
 Measured in this hydrated checkout: 3.1 GB total, `assets/` 1.5 GB, `.git/lfs`
-1.5 GB, `.git/objects` 34 MB, and 6,812 LFS DDS files. The same revision cloned
-with `GIT_LFS_SKIP_SMUDGE=1` measured 129 MB (53 MB working tree, 37 MB `.git`,
-no `.git/lfs`); every DDS was a 130-byte pointer and `git lfs ls-files -s`
+1.5 GB, `.git/objects` 34 MB. The DDS set is 6,812 files totalling 1,572,457,676
+bytes on disk, which `.git/lfs` holds as 6,811 deduplicated objects
+(1,572,446,612 bytes); the download index advertises 1,574,002,482
+`installed_bytes` and 105 parts totalling 733,537,298 bytes. The same revision
+cloned with `GIT_LFS_SKIP_SMUDGE=1` (local `git clone --no-local`) measured
+126 MB: 34 MB `.git` with no LFS objects plus about 92 MB of working tree, of
+which only 35 MB is content and the rest is 4 KiB block overhead over 16,433
+files. `assets/` alone is 53 MB of that, because the 6,812 pointers and 6,812
+metadata JSON files each take a 4 KiB block for under 2 KiB of data (1.5 MiB of
+JSON in total). Every DDS was a 130-byte pointer and `git lfs ls-files -s`
 reported no hydrated file. The working tree is larger than the issue's 70 MB
-estimate because the 6,812 texture metadata files are ordinary tracked files.
+estimate because of that per-file block overhead, not content.
 
 Pointer-only clone checks: the Repository texture pack verification stops with
 "Texture files are Git LFS pointers. Run git lfs pull before building or
