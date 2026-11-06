@@ -1,14 +1,15 @@
 ---
 id: TASK-003.03
-title: 'MAC-006: Cube and volume texture resources'
+title: Cube and volume texture resources
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos
   - mac-port
+  - mac-006
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

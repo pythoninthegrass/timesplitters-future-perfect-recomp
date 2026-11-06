@@ -1,10 +1,10 @@
 ---
 id: TASK-003.14
-title: 'Mac validation: Native runner gameplay, menu & debug'
+title: 'Native runner gameplay, menu & debug'
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos

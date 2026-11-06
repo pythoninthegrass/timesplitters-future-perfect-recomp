@@ -1,14 +1,15 @@
 ---
 id: TASK-003.02
-title: 'MAC-005: Multiple texture stages and shader fidelity'
+title: Multiple texture stages and shader fidelity
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos
   - mac-port
+  - mac-005
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

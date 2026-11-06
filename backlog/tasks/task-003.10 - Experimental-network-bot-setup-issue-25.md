@@ -1,14 +1,15 @@
 ---
 id: TASK-003.10
-title: 'MAC-052: Experimental network bot setup (issue #25)'
+title: 'Experimental network bot setup (issue #25)'
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos
   - mac-port
+  - mac-052
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv
