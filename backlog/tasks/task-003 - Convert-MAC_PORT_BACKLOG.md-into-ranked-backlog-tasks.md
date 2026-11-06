@@ -5,7 +5,7 @@ status: In Progress
 assignee:
   - Assistant
 created_date: '2026-11-06 04:07'
-updated_date: '2026-11-06 04:37'
+updated_date: '2026-11-06 04:38'
 labels:
   - docs
   - macos
@@ -35,14 +35,6 @@ docs/project/MAC_PORT_BACKLOG.md was about 9,900 lines (700 KB) and docs/project
 - [x] #6 Plan for STATUS.md size (split by date or milestone, or move measurements elsewhere) written up as follow-up TASK-004, not done here
 <!-- AC:END -->
 
-
-
-
-
-
-
-
-
 ## Implementation Plan
 
 <!-- SECTION:PLAN:BEGIN -->
@@ -54,3 +46,9 @@ Steps:
 4. Full scrub of MAC_PORT_BACKLOG references (README/CONTRIBUTING/docs/players+development/agents guides/tools); update owning guides build-test.md + investigation.md; run repo-context check --base.
 Do not push or merge to main without explicit instruction.
 <!-- SECTION:PLAN:END -->
+
+## Final Summary
+
+<!-- SECTION:FINAL_SUMMARY:BEGIN -->
+Committed as 20075983 on branch chore/mac-backlog-migration (not pushed, not merged into main). docs/project/MAC_PORT_BACKLOG.md and tests/repository/test_mac_backlog.py removed; docs/project/MAC_PORT_QUEUE.tsv (127 rows) and tools/mac_backlog_queue.py added; 19 children under TASK-003 (10 individual Queued/In progress, 9 grouped validation tasks covering the 110 Awaiting validation entries) plus top-level TASK-004 for the deferred STATUS.md size work. AGENTS.md, README, CONTRIBUTING and eight docs now point at backlog/tasks/. Verified: repo-context check --base main passes; tests/repository + tests/launcher give 656 passed, with 22 errors and 1 failure that are pre-existing environment gaps in this fresh worktree (missing ignored external/ts3FPrecomp checkout, and pytest-xdist absent for the -n option). Known gap left open: docs/project/STATUS.md still has about 30 internal links to the deleted file, deferred with its size work to TASK-004. MAC-124 and MAC-125 had headings but no queue table row, a pre-existing gap the retired integrity check never saw because it parsed only three-hash headings.
+<!-- SECTION:FINAL_SUMMARY:END -->
