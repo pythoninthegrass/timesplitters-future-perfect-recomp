@@ -1,5 +1,9 @@
 # Investigation memory and handoffs
 
+Root `AGENTS.md` is a compact entry point: source/patch ownership, executable
+build/test routes, isolated validation and release constraints. Detailed subsystem
+procedures stay in this map's linked guides; task history belongs in ignored notes.
+
 Linux patches2402 through2412 follow2401; its duplicate2512 is omitted. Context
 order assertions and historical subset exclusions track both dependencies;
 complete-stack transitions must still apply them. See [game adapters](linux-game.md).
