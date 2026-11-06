@@ -1,14 +1,15 @@
 ---
 id: TASK-003.09
-title: 'MAC-046: Update transaction rename contention'
+title: Update transaction rename contention
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - bug
   - macos
   - mac-port
+  - mac-046
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

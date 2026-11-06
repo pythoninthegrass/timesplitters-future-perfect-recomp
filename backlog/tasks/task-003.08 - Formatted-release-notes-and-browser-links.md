@@ -1,14 +1,15 @@
 ---
 id: TASK-003.08
-title: 'MAC-042: Formatted release notes and browser links'
+title: Formatted release notes and browser links
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos
   - mac-port
+  - mac-042
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

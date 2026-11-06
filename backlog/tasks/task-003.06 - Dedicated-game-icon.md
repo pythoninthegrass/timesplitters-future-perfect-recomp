@@ -1,14 +1,15 @@
 ---
 id: TASK-003.06
-title: 'MAC-040: Dedicated game icon'
+title: Dedicated game icon
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - other
   - macos
   - mac-port
+  - mac-040
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

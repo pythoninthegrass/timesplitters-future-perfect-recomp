@@ -5,7 +5,7 @@ status: Done
 assignee:
   - Assistant
 created_date: '2026-11-06 04:07'
-updated_date: '2026-11-06 04:39'
+updated_date: '2026-11-06 05:11'
 labels:
   - docs
   - macos
@@ -28,12 +28,16 @@ docs/project/MAC_PORT_BACKLOG.md was about 9,900 lines (700 KB) and docs/project
 ## Acceptance Criteria
 <!-- AC:BEGIN -->
 - [x] #1 Per-ID extraction script committed (tools/mac_backlog_queue.py) that lists ID, title and status from the queue table without reading the whole file
-- [x] #2 Every Queued and In progress entry has a backlog task, labeled bug, feature, ci or other, with the MAC ID and any issue number in the title or references
+- [x] #2 Every Queued and In progress entry has a backlog task labeled bug, feature, ci or other, with its MAC ID reachable through a mac-nnn label, the description and the queue snapshot; titles stay plain because labels already carry the classification (user instruction, 2026-11-05)
 - [x] #3 Awaiting validation entries grouped into validation tasks by shared test path (native Mac runner, launcher tests, GPU contracts, and so on), each listing its MAC IDs
 - [x] #4 Tasks ordered bugs, then features, then CI, then other, using backlog priority
 - [x] #5 Decision recorded (user, 2026-11-05): the ranked Backlog tasks are authoritative; MAC_PORT_BACKLOG.md and the CI ID/status integrity check were removed and AGENTS.md plus the docs now point at backlog/tasks/
 - [x] #6 Plan for STATUS.md size (split by date or milestone, or move measurements elsewhere) written up as follow-up TASK-005, not done here
 <!-- AC:END -->
+
+
+
+
 
 ## Implementation Plan
 

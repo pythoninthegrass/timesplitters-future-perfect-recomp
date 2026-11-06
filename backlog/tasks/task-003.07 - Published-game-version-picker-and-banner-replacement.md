@@ -1,14 +1,15 @@
 ---
 id: TASK-003.07
-title: 'MAC-041: Published game version picker and banner replacement'
+title: Published game version picker and banner replacement
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos
   - mac-port
+  - mac-041
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

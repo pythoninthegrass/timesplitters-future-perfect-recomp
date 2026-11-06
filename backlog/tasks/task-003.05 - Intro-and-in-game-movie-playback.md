@@ -1,14 +1,15 @@
 ---
 id: TASK-003.05
-title: 'MAC-009: Intro and in-game movie playback'
+title: Intro and in-game movie playback
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - feature
   - macos
   - mac-port
+  - mac-009
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

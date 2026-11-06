@@ -1,14 +1,15 @@
 ---
 id: TASK-003.01
-title: 'MAC-036: Ghost Gun full-body visibility'
+title: Ghost Gun full-body visibility
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:28'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - bug
   - macos
   - mac-port
+  - mac-036
 dependencies: []
 references:
   - docs/project/MAC_PORT_QUEUE.tsv

@@ -1,10 +1,10 @@
 ---
 id: TASK-003.17
-title: 'Mac validation: Independent recompiler toolchain'
+title: Independent recompiler toolchain
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - ci
   - macos

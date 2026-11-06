@@ -1,10 +1,10 @@
 ---
 id: TASK-003.18
-title: 'Mac validation: Launcher, release & distribution'
+title: 'Launcher, release & distribution'
 status: To Do
 assignee: []
 created_date: '2026-11-06 04:29'
-updated_date: '2026-11-06 04:30'
+updated_date: '2026-11-06 05:11'
 labels:
   - ci
   - macos
