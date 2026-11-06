@@ -1,5 +1,5 @@
 ---
-id: TASK-004
+id: TASK-005
 title: 'STATUS.md size: split by date/milestone or move measurements out'
 status: To Do
 assignee: []
