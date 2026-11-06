@@ -192,7 +192,7 @@ def affected(paths, *, full=False):
                               'tests/repository/test_issue_', 'tests/repository/test_known_issues')):
             continue  # Scoped reusable issue jobs own these tests.
         elif path in ('tools/ci/compatibility-worker.py', 'tests/repository/test_compatibility_worker.py',
-                      'tests/repository/test_mac_backlog.py', 'tools/repo-context.py',
+                      'tools/repo-context.py',
                       'tests/repository/test_repo_context.py', 'tools/router/repository-context.mjs',
                       'tests/repository/repository-context.test.mjs', 'tests/repository/repository-evidence.test.mjs',
                       'tools/router/repository-evidence.mjs', 'tools/router/advisory-evidence.mjs'):

@@ -1,0 +1,128 @@
+id	type	group	status	issue	in_table	title
+MAC-036	bug	individual (MAC-036)	Queued	111	1	Ghost Gun full-body visibility (issue #111)
+MAC-046	bug	individual (MAC-046)	Queued		1	Update transaction rename contention
+MAC-001	feature	Input, controls & interaction	Awaiting validation		1	Direct-camera mouse look
+MAC-002	feature	Input, controls & interaction	Awaiting validation		1	Keyboard/mouse prompts and device switching
+MAC-003	feature	Native runner gameplay, menu & debug	Awaiting validation		1	Debug settings and on-screen performance information
+MAC-004	feature	Input, controls & interaction	Awaiting validation		1	Capture-to-bind and conflict reassignment
+MAC-005	feature	individual (MAC-005)	In progress		1	Multiple texture stages and shader fidelity
+MAC-006	feature	individual (MAC-006)	In progress		1	Cube and volume texture resources
+MAC-007	feature	individual (MAC-007)	In progress		1	Screen-copy effects and image surfaces
+MAC-009	feature	individual (MAC-009)	Queued		1	Intro and in-game movie playback
+MAC-010	feature	GPU / rendering & display	Awaiting validation		1	In-game resolution preview and rollback
+MAC-011	feature	Native runner gameplay, menu & debug	Awaiting validation		1	Real texture-pack gameplay coverage
+MAC-013	feature	Story / System Link / Online multiplayer	Awaiting validation		1	System Link and Online multiplayer
+MAC-016	feature	Input, controls & interaction	Awaiting validation	6	1	Shared pickup-range comparison fix (issue #6)
+MAC-018	feature	Audio playback	Awaiting validation	8	1	Story audio timing, queue retry and ADPCM resume (issue #8)
+MAC-019	feature	GPU / rendering & display	Awaiting validation	9	1	Framebuffer refresh between effects (issue #9)
+MAC-020	feature	GPU / rendering & display	Awaiting validation	33	1	Adaptive cutscene letterboxing (issue #33)
+MAC-022	feature	GPU / rendering & display	Awaiting validation	29	1	Configurable gameplay FOV (issue #29)
+MAC-023	feature	Native runner gameplay, menu & debug	Awaiting validation	11	1	Story Objectives health/shield (issue #11)
+MAC-024	feature	GPU / rendering & display	Awaiting validation	27#31	1	Resolution catalog and proportional UI (issues #27/#31)
+MAC-025	feature	Native runner gameplay, menu & debug	Awaiting validation		1	Reusable unlocked testing profile
+MAC-026	feature	Native runner gameplay, menu & debug	Awaiting validation	22	1	Character picker and weapon proportions (issue #22)
+MAC-027	feature	GPU / rendering & display	Awaiting validation		1	Arcade RANK widget left placement
+MAC-028	feature	GPU / rendering & display	Awaiting validation	82	1	Preserve frontend camera FOV (#82)
+MAC-029	feature	Native runner gameplay, menu & debug	Awaiting validation	50	1	Skippable idle demo video (#50)
+MAC-030	feature	Input, controls & interaction	Awaiting validation	86	1	Menu mouse selection (#86)
+MAC-031	feature	Native runner gameplay, menu & debug	Awaiting validation		1	Quit to Desktop menu entries
+MAC-032	feature	GPU / rendering & display	Awaiting validation		1	Responsive menu backgrounds and scope masks
+MAC-033	feature	GPU / rendering & display	Awaiting validation		1	Full-display transition fades
+MAC-035	feature	GPU / rendering & display	Awaiting validation	30	1	Cinematic width fill (issue #30 investigation)
+MAC-041	feature	individual (MAC-041)	Queued		1	Published game version picker and banner replacement
+MAC-042	feature	individual (MAC-042)	Queued		1	Formatted release notes and browser links
+MAC-043	feature	Input, controls & interaction	Awaiting validation		1	Automatic mouse Auto Lookahead override
+MAC-045	feature	GPU / rendering & display	Awaiting validation	47	1	Terminal camera depth clears (issue #47)
+MAC-047	feature	GPU / rendering & display	Awaiting validation		1	Main-menu image and lettering fidelity
+MAC-048	feature	Native runner gameplay, menu & debug	Awaiting validation	100	1	Companion vehicle zero-flag joins (#100)
+MAC-049	feature	GPU / rendering & display	Awaiting validation	17	1	Spirit skull and eye rendering (#17)
+MAC-052	feature	individual (MAC-052)	Queued	25	1	Experimental network bot setup (issue #25)
+MAC-054	feature	GPU / rendering & display	Awaiting validation	167	1	Fractional presentation targets and Windows transform setup (issue #167)
+MAC-055	feature	Input, controls & interaction	Awaiting validation		1	Persist accepted frontend Controls before quitting Settings
+MAC-056	feature	GPU / rendering & display	Awaiting validation	49	1	Texture-camera composition alignment (issue #49)
+MAC-058	feature	GPU / rendering & display	Awaiting validation	221	1	Crane and remote-view vignette sizing (issue #221)
+MAC-059	feature	Input, controls & interaction	Awaiting validation	136	1	Physical keyboard entry in original text dialogs (issue #136)
+MAC-060	feature	GPU / rendering & display	Awaiting validation		1	Native fractional updates at 60/120/144 FPS
+MAC-061	feature	Saves, settings & profile	Awaiting validation		1	Host save-drive metadata and inline drive selection
+MAC-063	feature	GPU / rendering & display	Awaiting validation	102	1	Projected enemy health bars (issue #102)
+MAC-082	feature	GPU / rendering & display	Awaiting validation	358	1	Projected enemy shield effects (issue #358)
+MAC-085	feature	GPU / rendering & display	Awaiting validation	371	1	Shared impact spark timing (issue #371)
+MAC-119	feature	Saves, settings & profile	Awaiting validation		1	Profile-scoped Unlock Content
+MAC-120	feature	Audio playback	Awaiting validation		1	Enhanced Audio beta
+MAC-121	feature	Input, controls & interaction	Awaiting validation	357	1	High-FPS interaction input (#357)
+MAC-122	feature	GPU / rendering & display	Awaiting validation	398	1	Temporary material matrix cache epoch (#398)
+MAC-124	feature	Saves, settings & profile	Awaiting validation		0	Choose save folders (discussion 401)
+MAC-125	feature	GPU / rendering & display	Awaiting validation	338	0	Assault objective widescreen placement (#338)
+MAC-128	feature	Input, controls & interaction	Awaiting validation	434	1	Fresh weapon trigger timing (#434)
+MAC-129	feature	GPU / rendering & display	Awaiting validation		1	Optional SMAA anti-aliasing
+MAC-015	ci	Launcher, release & distribution	Awaiting validation		1	Release test privileges and disposable cleanup
+MAC-021	ci	Launcher, release & distribution	Awaiting validation		1	Published-release launcher and pre-game settings
+MAC-044	ci	Launcher, release & distribution	Awaiting validation		1	Game crash capture and launcher reports
+MAC-051	ci	Launcher, release & distribution	Awaiting validation		1	Version and build-identity watermark
+MAC-057	ci	Launcher, release & distribution	Awaiting validation		1	Optional texture pack delivery through the launcher
+MAC-062	ci	Launcher, release & distribution	Awaiting validation		1	Stable and named game release channels
+MAC-064	ci	Independent recompiler toolchain	Awaiting validation		1	Self-contained runtime source
+MAC-065	ci	Independent recompiler toolchain	Awaiting validation		1	Independent game-disc import
+MAC-066	ci	Independent recompiler toolchain	Awaiting validation		1	Independent executable analysis
+MAC-067	ci	Independent recompiler toolchain	Awaiting validation		1	Independent disassembler input
+MAC-068	ci	Independent recompiler toolchain	Awaiting validation		1	Independent instruction traversal
+MAC-069	ci	Independent recompiler toolchain	Awaiting validation		1	Independent table and body recovery
+MAC-070	ci	Independent recompiler toolchain	Awaiting validation		1	Independent function discovery and metadata
+MAC-071	ci	Independent recompiler toolchain	Awaiting validation		1	Independent analysis runner and publication
+MAC-072	ci	Independent recompiler toolchain	Awaiting validation		1	Independent symbol adapter and pipeline driver
+MAC-073	ci	Independent recompiler toolchain	Awaiting validation		1	Independent function catalog
+MAC-074	ci	Independent recompiler toolchain	Awaiting validation		1	Independent generation support
+MAC-075	ci	Independent recompiler toolchain	Awaiting validation		1	Independent translator decoding
+MAC-076	ci	Independent recompiler toolchain	Awaiting validation		1	Independent translation layout and hook planning
+MAC-077	ci	Independent recompiler toolchain	Awaiting validation		1	Independent branch feedback and unresolved diagnostics
+MAC-078	ci	Independent recompiler toolchain	Awaiting validation		1	Independent C operand emission
+MAC-079	ci	Independent recompiler toolchain	Awaiting validation		1	Independent data-transfer and stack lowering
+MAC-080	ci	Independent recompiler toolchain	Awaiting validation		1	Independent scalar integer lowering
+MAC-081	ci	Independent recompiler toolchain	Awaiting validation		1	Independent shift and rotate lowering
+MAC-083	ci	Independent recompiler toolchain	Awaiting validation		1	Independent bit tests, scans and byte swaps
+MAC-084	ci	Independent recompiler toolchain	Awaiting validation		1	Independent multiply and divide lowering
+MAC-086	ci	Independent recompiler toolchain	Awaiting validation		1	Independent exchange lowering and atomic helpers
+MAC-087	ci	Independent recompiler toolchain	Awaiting validation		1	Independent comparison snapshots and sign extension
+MAC-088	ci	Independent recompiler toolchain	Awaiting validation		1	Independent string-instruction lowering
+MAC-089	ci	Independent recompiler toolchain	Awaiting validation		1	Independent condition-code generation
+MAC-090	ci	Independent recompiler toolchain	Awaiting validation		1	Independent SSE emission
+MAC-091	ci	Independent recompiler toolchain	Awaiting validation		1	Independent MMX emission
+MAC-092	ci	Independent recompiler toolchain	Awaiting validation		1	Independent x87 emission
+MAC-093	ci	Independent recompiler toolchain	Awaiting validation		1	Independent control-transfer emission
+MAC-094	ci	Independent recompiler toolchain	Awaiting validation		1	Independent instruction and block lifting
+MAC-095	ci	Independent recompiler toolchain	Awaiting validation		1	Independent lifter context and helper recognition
+MAC-096	ci	Independent recompiler toolchain	Awaiting validation		1	Independent batch translation and dispatch output
+MAC-097	ci	Independent recompiler toolchain	Awaiting validation		1	Independent translator context and entry discovery
+MAC-098	ci	Independent recompiler toolchain	Awaiting validation		1	Independent complete function emission
+MAC-099	ci	Independent recompiler toolchain	Awaiting validation		1	Independent translation command line
+MAC-100	ci	Independent recompiler toolchain	Awaiting validation		1	Project guest register and memory primitives
+MAC-101	ci	Independent recompiler toolchain	Awaiting validation		1	Project indirect guest-call dispatch
+MAC-102	ci	Independent recompiler toolchain	Awaiting validation		1	Project call checks and HLE argument frames
+MAC-103	ci	Independent recompiler toolchain	Awaiting validation		1	Project vector constructor and obsolete SIMD helper retirement
+MAC-104	ci	Independent recompiler toolchain	Awaiting validation		1	Direct scalar extension and numeric helper retirement
+MAC-105	ci	Independent recompiler toolchain	Awaiting validation		1	Canonical project guest execution header
+MAC-106	ci	Independent recompiler toolchain	Awaiting validation		1	Project branch-feedback provider and generated header
+MAC-107	ci	Independent recompiler toolchain	Awaiting validation		1	Project native continuation service
+MAC-108	ci	Independent recompiler toolchain	Awaiting validation		1	Project guest state and ABI diagnostics
+MAC-109	ci	Independent recompiler toolchain	Awaiting validation		1	Project native image loading
+MAC-110	ci	Independent recompiler toolchain	Awaiting validation		1	Project guest allocation ownership
+MAC-111	ci	Independent recompiler toolchain	Awaiting validation		1	Project guest thread storage
+MAC-112	ci	Independent recompiler toolchain	Awaiting validation		1	Project virtual-memory services
+MAC-113	ci	Independent recompiler toolchain	Awaiting validation		1	Project native memory ownership
+MAC-114	ci	Independent recompiler toolchain	Awaiting validation		1	Project guest memory services
+MAC-115	ci	Independent recompiler toolchain	Awaiting validation		1	Project native virtual-memory host operations
+MAC-116	ci	Independent recompiler toolchain	Awaiting validation		1	Project guest host mappings
+MAC-117	ci	Independent recompiler toolchain	Awaiting validation		1	Retired compatibility memory APIs
+MAC-118	ci	Independent recompiler toolchain	Awaiting validation		1	Independent kernel object lifetime
+MAC-123	ci	Independent recompiler toolchain	Awaiting validation		1	Bounded guest-memory crash evidence and model history
+MAC-127	ci	Launcher, release & distribution	Awaiting validation		1	Complete launcher language packs
+MAC-040	other	individual (MAC-040)	Queued		1	Dedicated game icon
+MAC-053	other	Discord & community	Awaiting validation	63	1	Discord Rich Presence (issue #63)
+MAC-126	other	Discord & community	Awaiting validation		1	Launcher Discord community button
+MAC-008			Verified		1	Scissor clipping
+MAC-012			Verified		1	Standalone Mac runtime distribution
+MAC-014			Verified		1	Patch upgrades across Windows watermark and native overlay guards
+MAC-034			Not applicable		1	Plain improvement form handoff
+MAC-037			Not applicable	128	1	Fresh-install launch without PowerShell (issue #128)
+MAC-039			Not applicable		1	Recoverable launcher startup security interruptions
+MAC-050			Verified		1	Restore a reproducible native build from current main

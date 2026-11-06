@@ -3,6 +3,11 @@
 Root `AGENTS.md` is a compact entry point: source/patch ownership, executable
 build/test routes, isolated validation and release constraints. Detailed subsystem
 procedures stay in this map's linked guides; task history belongs in ignored notes.
+Root AGENTS.md now records deferred Mac adapter/acceptance work in the matching
+Backlog task under `backlog/tasks/` instead of `docs/project/MAC_PORT_BACKLOG.md`
+(removed by TASK-003), and no longer promises a CI "backlog ID/status integrity"
+check. Keep the durable Mac handoff in the ranked Backlog tasks; keep measured
+results in `docs/project/STATUS.md`.
 
 Linux patches2402 through2412 follow2401; its duplicate2512 is omitted. Context
 order assertions and historical subset exclusions track both dependencies;

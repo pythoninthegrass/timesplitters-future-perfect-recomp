@@ -70,8 +70,8 @@ Mac use the same in-game Display menu and mode policy. Both Mac renderer paths
 consume that policy; the separate Cocoa settings/F10 shortcut remains pending.
 Native Mac interaction and real-art scene validation remain pending.
 Legacy GL accepts compressed replacements and falls back to originals for RGBA
-replacements. Platform validation is tracked under
-[MAC-011](../project/MAC_PORT_BACKLOG.md#mac-011--real-texture-pack-gameplay-coverage).
+replacements. Platform validation is tracked under `MAC-011` in the Mac port
+Backlog (`backlog/tasks/`).
 
 See [the batch 188 audit](../project/STATUS.md#texture-overhaul-issue-74-correction-batch-188)
 for measured progress and the [texture guide](textures.md) for production and

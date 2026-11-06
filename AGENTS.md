@@ -73,7 +73,8 @@ Run from the repository root. Use `.venv/bin/python` on Mac or
   when absent. Storage changes must preserve existing saves on NTFS/exFAT and
   after relocation; sparse-file support is optional.
 - Record measured checks and unrun host checks in `docs/project/STATUS.md`, with
-  Mac adaptation/acceptance gaps in `docs/project/MAC_PORT_BACKLOG.md`. Build,
+  Mac adaptation/acceptance gaps in the matching Mac port Backlog task under
+  `backlog/tasks/`. Build,
   startup, rendered menus, gameplay and physical-device validation are separate
   evidence. Keep original 60 FPS/60 Hz defaults; native high-FPS is opt-in, not
   the retired interpolation engine or permission to raise the interrupt clock.

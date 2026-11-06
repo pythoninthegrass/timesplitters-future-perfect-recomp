@@ -451,7 +451,7 @@ to roughly 1 MiB). Game output continues through the release's `Launch.ps1` and
 its `Logs` folder. Saves and config are not used for automated launcher checks.
 
 Windows-specific source lives in `tools/launcher`; Mac release updating remains
-queued as `MAC-014` in `docs/project/MAC_PORT_BACKLOG.md`.
+queued as `MAC-014` in the Mac port Backlog (`backlog/tasks/`).
 
 Launcher v1.2.3 keeps custom FOV disabled for installed game releases through
 v0.2.0-alpha.4, which only read V1 display settings. Resolution changes continue

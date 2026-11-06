@@ -17,7 +17,7 @@ function sourceAllowed(name,namespace){
   if((name.split('/').includes('build')&&!name.startsWith('tools/build/')&&!name.startsWith('config/build/'))||name.split('/').some(p=>/^(?:private|assets|logs|gen|generated|node_modules|vendor|third_party)$/i.test(p)||/(?:^|[._-])(?:auth|credentials?|secrets?|tokens?|passwords?)(?:[._-]|$)/i.test(p)))return false;
   if(namespace==='runtime')return /^(?:CMakeLists\.txt$|src\/|tools\/recomp\/|scripts\/|templates\/|config\/extra_symbols\/|titles\/futureperfect\/(?:src\/|CMakeLists\.txt$))/.test(name)&&(/\.(?:c|h|cpp|hpp|inc|py|json|txt)$/.test(name)||name.endsWith('CMakeLists.txt'));
   return /^(?:src\/|tests\/|tools\/|patches\/|docs\/)/.test(name)&&(/\.(?:c|h|cpp|hpp|m|mm|inc|def|cs|xaml|py|mjs|js|cjs|ps1|sh|cmd|command|patch|md|json|txt|cmake|hlsl|glsl|metal|vert|frag)$/.test(name)||name.endsWith('CMakeLists.txt'))
-    || /^(?:tsfp\.ps1|setup\.ps1|requirements(?:-release)?\.txt|(?:README|AGENTS|STATUS|MAC_PORT_BACKLOG|CONTRIBUTING)\.md|Play(?:-Native-Mac)?\.command|Play(?:-Quiet|-Textures)?\.cmd|\.github\/(?:workflows|ISSUE_TEMPLATE)\/[^/]+\.ya?ml|config\/(?:[^/]+\.default\.(?:json|ini)|build\/(?:vulkan-sdk|mac-launcher-sdk|native-mac-runtime-licenses)\.json|textures\/texture-pack\.json))$/.test(name);
+    || /^(?:tsfp\.ps1|setup\.ps1|requirements(?:-release)?\.txt|(?:README|AGENTS|STATUS|CONTRIBUTING)\.md|Play(?:-Native-Mac)?\.command|Play(?:-Quiet|-Textures)?\.cmd|\.github\/(?:workflows|ISSUE_TEMPLATE)\/[^/]+\.ya?ml|config\/(?:[^/]+\.default\.(?:json|ini)|build\/(?:vulkan-sdk|mac-launcher-sdk|native-mac-runtime-licenses)\.json|textures\/texture-pack\.json))$/.test(name);
 }
 function safePath(root,name){
   relative(name);let current=root;

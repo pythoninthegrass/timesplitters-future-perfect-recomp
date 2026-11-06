@@ -9,6 +9,8 @@ docs/agent-context/*.md text eol=lf
 tools/compiler/xbe_kernel_exports.def text eol=lf
 tools/compiler/translation_host_symbols.txt text eol=lf
 tools/compiler/translation_host_symbols.json text eol=lf
+# Generated queue snapshot: keep identical bytes on both hosts (see tools/mac_backlog_queue.py).
+docs/project/MAC_PORT_QUEUE.tsv text eol=lf
 *.patch text eol=lf -whitespace
 *.cmd text eol=crlf
 *.ps1 text eol=crlf

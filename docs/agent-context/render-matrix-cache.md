@@ -41,4 +41,4 @@ Private draw captures and gameplay data stay ignored. Offline substitution of
 only constants 160..163 removed the defect in the retained bad frame; this
 isolates the affected data but is not itself a production replay fix. Actual
 Windows scene evidence and physical Mac validation limits belong in STATUS
-and MAC_PORT_BACKLOG.
+and the Mac port Backlog (`backlog/tasks/`).

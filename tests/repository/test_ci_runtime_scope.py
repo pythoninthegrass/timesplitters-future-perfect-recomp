@@ -138,7 +138,7 @@ def test_automation_is_not_scheduled_for_open_prs(filename, events):
     (['requirements-release.txt'], {'native'}),
     (['.github/workflows/runtime-patches.yml'], set(scope.SUITES)),
     (['tools/ci/issue-forms.py', 'tests/repository/test_issue_resolution.py'], set()),
-    (['README.md', 'docs/textures/textures.md', 'docs/project/MAC_PORT_BACKLOG.md'], set()),
+    (['README.md', 'docs/textures/textures.md'], set()),
     ([], set()),
 ])
 def test_scope(paths, expected):

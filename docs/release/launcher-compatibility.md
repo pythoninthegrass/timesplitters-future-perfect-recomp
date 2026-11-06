@@ -33,7 +33,7 @@ These tests do not establish high-refresh gameplay correctness or Mac rendering.
 Passing checks establish tested behavior, not complete visual or system-integration
 parity. Discord sessions, native dialogs, physical displays, signing/notarization
 and clean-machine delivery may need additional host checks. Record gaps in
-`docs/project/MAC_PORT_BACKLOG.md` and measured results in `docs/project/STATUS.md`.
+the matching Mac port Backlog task (`backlog/tasks/`) and measured results in `docs/project/STATUS.md`.
 
 ## Installation and operation
 

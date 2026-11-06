@@ -83,7 +83,7 @@ the game window closes. Disconnecting clears that process's presence.
 
 If presence does not appear, check activity sharing in Discord, confirm the ID,
 and look for `[PC-DISCORD]` in the game log. The game does not launch or install
-Discord for you. Mac adaptation is queued in `docs/project/MAC_PORT_BACKLOG.md`.
+Discord for you. Mac adaptation is queued in the Mac port Backlog (`backlog/tasks/`).
 
 ## Validation
 

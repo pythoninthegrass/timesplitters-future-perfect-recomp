@@ -83,7 +83,7 @@ legacy Mac GL adapter also consumes the shared algorithm.
    paths. New tests do not run merely because a file has been created.
 4. Run available native checks and record other-host checks as pending. Keep
    shared-source, compile, GPU, window/input and gameplay evidence distinct.
-5. Update `docs/project/MAC_PORT_BACKLOG.md` for remaining adapters/validation and `docs/project/STATUS.md`
+5. Update the matching Mac port Backlog task (`backlog/tasks/`) for remaining adapters/validation and `docs/project/STATUS.md`
    for measured results. Record a platform exception rather than silently
    presenting partial functionality as complete cross-platform support.
 

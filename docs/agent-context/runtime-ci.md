@@ -90,7 +90,8 @@ alpha.2 packaging. Trust-policy bytes are preserved unchanged. The relocated
 SSLContext regression runs in `test_publish_release.py`; the normal real-package
 probe still checks Tk, TLS and certificate generation with the bundled Python.
 
-`docs/project/STATUS.md` holds measured results; `docs/project/MAC_PORT_BACKLOG.md` records missing adapter
+`docs/project/STATUS.md` holds measured results; the Mac port Backlog tasks
+(`backlog/tasks/`) record missing adapter
 or validation work. Neither is an architectural index or a guarantee that all
 listed historical tests still describe current policy. Current rules retain
 original 60 FPS/60 Hz defaults, compatible native high-FPS opt-ins (separate
