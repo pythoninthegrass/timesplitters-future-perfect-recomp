@@ -210,7 +210,7 @@ model and button-prompt formatter, but the graphics backends remain separate. Re
 work before claiming a feature works on both platforms.
 
 New Windows PC features can be completed on PC first. Before completing a PC
-feature, add or update its entry in [the Mac port backlog](../project/MAC_PORT_BACKLOG.md)
+feature, add or update its task in [the Mac port Backlog](../../backlog/tasks/)
 with its behavior, source references, remaining Mac adaptation and acceptance
 checks. Mac implementation happens in a later requested porting task; queued Mac
 work does not block PC completion. Shared changes must still preserve existing

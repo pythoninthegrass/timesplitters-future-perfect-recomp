@@ -25,7 +25,7 @@ class Compatibility(unittest.TestCase):
                 self.assertTrue(compatibility.relevant(path))
 
     def test_unrelated_game_and_docs_changes_do_not_need_launcher_builds(self):
-        for path in ('docs/players/macos.md', 'docs/project/STATUS.md', 'docs/project/MAC_PORT_BACKLOG.md', 'src/native/input_sdl.c',
+        for path in ('docs/players/macos.md', 'docs/project/STATUS.md', 'src/native/input_sdl.c',
                      'patches/texture-mode-ui.patch', 'tools/textures/texture-pack.py'):
             self.assertFalse(compatibility.relevant(path))
 

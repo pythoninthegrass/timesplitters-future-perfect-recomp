@@ -683,10 +683,10 @@ that the exact retirement identities enter both package manifests and rejects
 reintroduced original-only keys. Use `tools/build/build-launcher.ps1 -Test` for Windows;
 CI provides native Mac launcher compilation and shared fixture execution.
 
-Launcher v1.2.24 version preparation uses `tests/launcher/test_launcher_release.py` and
-the Mac backlog integrity check; the dual-host launcher workflow validates the
-actual packages. Require the Repository texture pack check for this version bump
-and publish both launchers before the icon-removal game update.
+Launcher v1.2.24 version preparation uses `tests/launcher/test_launcher_release.py`
+and the Mac port Backlog tasks (`backlog/tasks/`); the dual-host workflow validates
+the actual packages. Require the Repository texture pack check for this bump and
+publish both launchers before the icon-removal game update.
 
 ## Live FPS handoff regression
 

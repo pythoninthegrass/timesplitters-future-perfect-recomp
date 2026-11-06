@@ -206,7 +206,7 @@ def allowed_change(name):
     if (p.is_absolute() or '..' in p.parts or any(s.startswith('.') for s in p.parts)
             or name in PROTECTED or '\\' in name or any(ord(c) < 32 for c in name)):
         return False
-    if name in ('docs/project/MAC_PORT_BACKLOG.md', 'docs/project/STATUS.md'):
+    if name in ('docs/project/STATUS.md',):
         return True
     if p.parts[0] == 'docs':
         return p.suffix == '.md'
@@ -535,8 +535,8 @@ Run relevant asset-free tests inside this sandbox, with bounded duration and dis
 Never download game assets, run the interactive launcher, access personal files/credentials,
 weaken tests, edit workflow/security/agent policy, merge, publish releases or buy usage.
 Do not spawn other agents. If blocked or a manual platform decision is needed, explain and stop.
-Only change ordinary source/tests/docs/patches. Update docs/project/MAC_PORT_BACKLOG.md and docs/project/STATUS.md when applicable.
-Record actual validation and remaining host/visual limits in docs/project/STATUS.md and platform follow-up in docs/project/MAC_PORT_BACKLOG.md.
+Only change ordinary source/tests/docs/patches. Update docs/project/STATUS.md and the relevant Mac port Backlog task under backlog/tasks/ when applicable.
+Record actual validation and remaining host/visual limits in docs/project/STATUS.md and platform follow-up in the matching Backlog task under backlog/tasks/.
 The final response becomes the PR's Cause and fix section. Use one short paragraph in everyday language:
 explain what caused the problem, how the repair helps, and any limit that affects users.
 For improvements, explain the benefit and how it works. Omit headings, test results, file lists and implementation/platform reports.

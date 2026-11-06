@@ -30,7 +30,7 @@ naming conventions and the distinction between source and local build data.
    Use the [build guide](docs/development/building.md) or [Mac guide](docs/players/macos.md) as needed.
 4. Keep the change focused and run the checks relevant to it. Record technical
    results and unrun checks in `docs/project/STATUS.md`, with platform follow-up
-   in `docs/project/MAC_PORT_BACKLOG.md` when applicable. Use disposable test
+   in the Mac port Backlog (`backlog/tasks/`) when applicable. Use disposable test
    saves and settings; leave personal files alone. Documentation-only changes
    do not need a game rebuild.
 5. Open a pull request using the template's **Change** and **Cause and fix**

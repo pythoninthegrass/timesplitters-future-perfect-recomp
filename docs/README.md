@@ -13,7 +13,7 @@ or [repository layout](development/repository-layout.md) for source and local fi
 | Build and contribute | [Building](development/building.md), [Linux bring-up](development/linux.md), [contributing](../CONTRIBUTING.md), [shared platform](development/shared-platform.md), [independent runtime](development/independent-runtime.md) |
 | Test and release | [Test profiles](development/testing-profile.md), [CI](development/ci.md), [releasing](release/releasing.md), [launcher releases](release/launcher-releases.md), [launcher compatibility](release/launcher-compatibility.md) |
 | Investigate internals | [Subsystem map](agent-context/README.md), [patch maintenance](../patches/README.md), [online bot investigation](analysis/online-bots-investigation.md) |
-| Check progress | [Measured status](project/STATUS.md), [Mac backlog](project/MAC_PORT_BACKLOG.md) |
+| Check progress | [Measured status](project/STATUS.md), [Mac backlog](../backlog/tasks/) |
 
 Player guides live in `players/`; update callers and relative links when moving
 a guide. Historical external links may refer to its previous repository path. Technical subsystem notes belong in `agent-context/`;

@@ -112,20 +112,22 @@ providers, perform handoffs or limit themselves to advisory work.
   in `src/diagnostics/pc_debug_options.def`, consumed by both dialogs and JSON persistence.
 - Genuine platform dependencies or an explicitly PC-only task may be deferred.
   Record the missing capability, why common code cannot yet supply it, and the
-  adapter/acceptance work in `docs/project/MAC_PORT_BACKLOG.md` before reporting completion.
+  adapter/acceptance work in the matching Mac port Backlog task under `backlog/tasks/`
+  before reporting completion.
   Distinguish implementation from each host's validation. Preserve unsupported
   saved options; do not silently reset them when another host edits settings.
   A deferred exception is not permission to regress existing Mac support.
 - Each entry must describe the PC behavior, source files and commit/PR when
   available (otherwise mark uncommitted), Mac support already present, remaining
-  adaptation, and acceptance checks. Use the backlog's statuses. An explicitly
+  adaptation, and acceptance checks. Use a Backlog task status. An explicitly
   scoped platform exception may complete on PC while its Mac adapter is queued.
   If no Mac adaptation
   is needed, record why and distinguish verified support from pending validation.
-- When asked to port features to Mac, consult `docs/project/MAC_PORT_BACKLOG.md`, implement
-  the requested entries, and update their status and evidence. Do not mark an
+- When asked to port features to Mac, consult the Mac port Backlog tasks under
+  `backlog/tasks/`, implement the requested entries, and update their status and
+  evidence. Do not mark an
   entry verified from a successful Windows test or shared-source change alone.
-  Keep measured validation in `docs/project/STATUS.md` and link it from the backlog.
+  Keep measured validation in `docs/project/STATUS.md` and link it from the Backlog task.
 - Implement platform-independent gameplay, input rules, asset/configuration
   handling and runtime fixes once in shared source or the shared patch stack.
   Keep operating-system event handling, native settings windows and graphics
@@ -162,10 +164,11 @@ providers, perform handoffs or limit themselves to advisory work.
   references, update and test that workflow before relying on automatic notes.
 - Use `.github/pull_request_template.md` for the user-facing explanation. Keep
   test results and unrun checks in `docs/project/STATUS.md`, and platform work
-  and supporting links in `docs/project/MAC_PORT_BACKLOG.md` when applicable.
+  and supporting links in the matching Mac port Backlog task under `backlog/tasks/`
+  when applicable.
   Required testing and shared-platform rules still apply. CI runs shared
-  contracts and selected host checks on Windows/macOS and checks
-  backlog ID/status integrity. Register new behavioral tests in that workflow.
+  contracts and selected host checks on Windows/macOS.
+  Register new behavioral tests in that workflow.
   These checks do not detect every missing feature or prove visual parity;
   agents must still maintain the handoff and report unavailable host checks.
 - Git revisions must contain the change and backlog update before another
